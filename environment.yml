@@ -1,0 +1,9 @@
+name: dutch_vault
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - sqlalchemy
+  - pip
