@@ -8,7 +8,7 @@ class Noun(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     word = Column(String, unique=True, nullable=False)
-    articles = relationship("NounArticle", back_populates="noun")
+    articles = relationship("NounArticle", back_populates="noun", cascade="all, delete-orphan")
 
 class NounArticle(Base):
     __tablename__ = "noun_articles"
